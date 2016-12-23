@@ -1,1 +1,0 @@
-var app=angular.module("Portfolio",["ngRoute"]);app.config(function(o){o.when("/",{templateUrl:"view/home.html",controller:"PortFolioCtrl"})}),app.controller("PortFolioCtrl",function(o){});
