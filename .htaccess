@@ -5,6 +5,18 @@
   AddType text/css .css
 </IfModule>
 
+RewriteEngine On
+        RewriteCond %{HTTP_HOST} !^www.iamheman.me$ [NC]
+        RewriteRule ^(.*)$ http://www.iamheman.me/$1 [L,R=301]
+
+RewriteEngine On
+        RewriteCond %{HTTP_HOST} ^www\.iamheman\.me$
+        RewriteRule ^/?$ "http\:\/\/iamheman\.me\/" [R=301,L]
+
+RewriteEngine On
+        RewriteCond %{HTTP_HOST} ^50\.17\.235\.124
+        RewriteRule (.*) http://www.iamheman.me/$1 [R=301,L]
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/javascript
   <IfModule mod_setenvif.c>
@@ -33,3 +45,4 @@
     ExpiresByType image/gif "access plus 1 month"
     ExpiresByType image/png "access plus 1 month"
 </IfModule>
+
