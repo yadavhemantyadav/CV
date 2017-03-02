@@ -24,3 +24,12 @@
   SetEnvIfNoCase Request_URI \.(?:avi|mov|mp4)$ no-gzip dont-vary
   SetEnvIfNoCase Request_URI \.mp3$ no-gzip dont-vary
 </IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+ 
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>
