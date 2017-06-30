@@ -12,6 +12,8 @@ app.use(compression());
 
 app.use(express.static(process.env.PWD));
 
+app.use(express.static(__dirname + '/public/'));
+
 app.get("/", function(request, response) {
     response.send('Hey!!');
 
