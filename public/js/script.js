@@ -51,7 +51,7 @@ app.controller('table', function($scope, baseURL, $http, $location){
 });
 
 app.service('baseURL', function () {
-         var property = "http://192.168.0.192:5000";
+         var property = "http://www.iamheman.me";
 
          return {
              getProperty: function () {
