@@ -1,0 +1,48 @@
+<!-- Header -->
+
+<div id="top" class="header" style="background-image: none;">
+   <div class="text-vertical-center">
+    <div id="grad1" class="grad1-div">
+        <div class="grad1-subdiv sub-page">
+        	<div  ng-app="Portfolio" ng-controller="table">
+        		<div class="col-md-12">
+                    <div class="col-md-offset-3 col-md-6 no-padding">  
+                        <div class="table-responsive">
+                            <table class="table table-fixed table-custom">
+                                <thead>
+                                	<tr>
+                                		<th colspan="4">Date: {{response[0].dates}}</th>
+                                	</tr>
+                                    <tr>
+                                    	<th style="width:20%;">Subject</th>
+                                        <th style="width:20%;">Start</th>
+                                        <th style="width:20%;">End</th>
+                                        <th style="width:20%;">Hall No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in response">
+                                    	<td class="">{{x.subject}}</td>
+                                        <td class="">{{x.duration1}}</td>
+                                        <td class="">{{x.duration2}}</td>
+                                        <td class="">{{x.hall_number}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div ng-show="isEmpty(response)">
+                    <div class="col-md-12">
+                        <h4 class="no-result">
+                            <i class="fa fa-meh-o fa-3x" aria-hidden="true"></i>
+                            <br> Seems like we dont have a class today!!!
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        	</div>
+        </div>
+    </div>
+   </div>
+</div>
