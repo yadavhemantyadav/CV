@@ -32,16 +32,11 @@ app.controller('table', function($scope, baseURL, $http, $location){
              })
              .success(function (response) {
              	console.log(response);
-                 if (response.error_code!="0") {
-                     //$location.path('/error');
-                     console.log("inside" + response);
-                     $scope.response = response.table;
-                     console.log($scope.response);
-
-                	console.log($scope.response.table);	
+                 if (response.error_code=="1") {
+                     $scope.response = response.table;	
                  } else {
-                     $scope.response = {"error":2};
-                     console.log($scope.response);
+                 	$location.path('/error');
+                    console.log($scope.response);
                  }
              });
 
