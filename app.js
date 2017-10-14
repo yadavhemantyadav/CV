@@ -26,7 +26,7 @@ app.use(cors());
 
 var mysql_pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'ec2-13-59-131-1.us-east-2.compute.amazonaws.com',
+  host            : 'ec2-18-221-173-255.us-east-2.compute.amazonaws.com',
   user            : 'hemant',
   password        : 'abc@abc',
   database        : 'kd'
