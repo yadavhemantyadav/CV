@@ -81,7 +81,7 @@ app.get('/timeTable',function(request,response,next){
 				var data = { "Time":"", "DatabaseStatus":"" };
 				data["Time"] = (new Date()).getTime();
 				data["DatabaseStatus"] = "Down";
-				data["error_code"] = 1;
+				data["error_code"] = "0";
 				response.json(data); 
 			} else {
 				console.log(rows);
@@ -93,7 +93,12 @@ app.get('/timeTable',function(request,response,next){
 				console.log(data);
 				res={};
 				res.table = data;
+				res.message = 1;
+				if(rows.length==0){
+					res.message = 0;	
+				}
 				res.error_code = "1";
+				
 				console.log(res);
 				response.json(res);
 			}

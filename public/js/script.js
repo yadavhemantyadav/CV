@@ -33,7 +33,8 @@ app.controller('table', function($scope, baseURL, $http, $location){
              .success(function (response) {
              	console.log(response);
                  if (response.error_code=="1") {
-                     $scope.response = response.table;	
+                     $scope.response = response.table;
+                     $scope.message = response.message;	
                  } else {
                  	$location.path('/error');
                     console.log($scope.response);
@@ -47,6 +48,7 @@ app.controller('table', function($scope, baseURL, $http, $location){
 
 app.service('baseURL', function () {
          var property = "http://www.iamheman.me";
+         //var property = "http://localhost:5000";
 
          return {
              getProperty: function () {

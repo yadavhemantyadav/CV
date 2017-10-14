@@ -5,7 +5,7 @@
     <div id="grad1" class="grad1-div">
         <div class="grad1-subdiv sub-page">
         	<div  ng-app="Portfolio" ng-controller="table">
-        		<div ng-if="response!={}" class="col-md-12">
+        		<div ng-if="message==1" class="col-md-12">
                     <div class="col-md-offset-3 col-md-6 no-padding">  
                         <div class="table-responsive">
                             <table class="table table-fixed table-custom">
@@ -33,11 +33,15 @@
                     </div>
                 </div>
                 <div>
-                    <div class="col-md-offset-3 col-md-6 no-padding">
+                    <div ng-if="message==0" class="col-md-offset-3 col-md-6 no-padding">
                         <h4 class="no-result">
                             <i class="fa fa-meh-o fa-3x" aria-hidden="true"></i>
-                            <br>If no data in table then possibly we dont have class today!!!
+                            <br>Seems like we dont have any class today!!!
                         </h4>
+                        <br>
+                        <h6 class="no-result">
+                        	If this is incorrect please post on group.
+                        </h6>
                     </div>
                 </div>
             </div>
