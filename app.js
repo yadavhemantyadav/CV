@@ -61,7 +61,7 @@ app.use(express.static(process.env.PWD));
 
 app.get('/timeTable',function(request,response,next){
 	var dt = dateTime.create();
-	var formatted = dt.format('d.m.Y');
+	var formatted = dt.format('d.m.y');
 	console.log(formatted);
 
 	var query = "select * from TimeTableDetails where dates = '" + formatted + "'";
@@ -112,7 +112,7 @@ app.get('/timeTable',function(request,response,next){
     
 // });
 
-app.get('*', function (req, res) {
+app.get('/', function (req, res) {
     console.log(req.params);
     //    var response = {};
     //    response["message"] = "invalid url";
