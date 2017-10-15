@@ -47,8 +47,10 @@ app.controller('table', function($scope, baseURL, $http, $location){
 });
 
 app.service('baseURL', function () {
-         var property = "http://www.iamheman.me";
+         //var property = "http://www.iamheman.me";
          //var property = "http://localhost:5000";
+         var property = "https://immense-brushlands-23404.herokuapp.com";
+         
 
          return {
              getProperty: function () {
